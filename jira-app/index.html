@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"  href="favicon-32x32.png">
+    <title>Dashboard - Jira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html"><img src="jira-logo.png"  class="app-title"></a>
+
+    <div class="drag-container">
+        <ul class="drag-list">
+
+            <!-- Todo -->
+            <li class="drag-column todo-column">
+                <span class="header">
+                    <span id="braille-icon">&#x283F</span>
+                    <h1 id="todo-head">TODO</h1>
+                    <img id="dots" src="dot.png">
+                </span>
+    
+                <div id="todo-content">
+                    <ul class="drag-item-list" id="todo-list" ondragover="allowDrop(event)" ondragenter="dragEnter(0)" ondrop="drop(event)">
+                    </ul>
+                </div>
+
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showItemDiv(0)">
+                        <span class="plus-span">+</span>
+                    </div>
+
+                    <div class="add-btn update" onclick="hideItemDiv(0)">
+                        <span>Create</span>
+                    </div>
+                </div>
+            </li>
+
+            <!-- InProgress -->
+            <li class="drag-column progress-column">
+                <span class="header">
+                    <span id="braille-icon">&#x283F</span>
+                    <h1 id="progress-head">IN PROGRESS</h1>
+                    <img id="dots" src="dot.png">
+                </span>
+                
+                <div id="progress-content">
+                    <ul class="drag-item-list" id="progress-list" ondragover="allowDrop(event)" ondragenter="dragEnter(1)" ondrop="drop(event)">
+                    </ul>
+                </div>
+
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showItemDiv(1)">
+                        <span class="plus-span">+</span>
+                    </div>
+
+                    <div class="add-btn update" onclick="hideItemDiv(1)">
+                        <span>Create</span>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Done -->
+            <li class="drag-column done-colum
+                <span class="header">
+                    <span id="braille-icon">&#x283F</span>
+                    <h1 id="done-head">DONE</h1>
+                    <img id="dots" src="dot.png">
+                </span>
+                
+                <div id="done-content">
+                    <ul class="drag-item-list" id="done-list" ondragover="allowDrop(event)" ondragenter="dragEnter(2)" ondrop="drop(event)">
+                    </ul>
+                </div>
+
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showItemDiv(2)">
+                        <span class="plus-span">+</span>
+                    </div>
+
+                    <div class="add-btn update" onclick="hideItemDiv(2)">
+                        <span>Create</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<script src="jira.js"></script>
+</body>
+</html>
